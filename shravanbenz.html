@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Collection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            color: #00adef; /* Mercedes Silver-Blue accent */
+        }
+
+        .container {
+            display: none; /* This hides all pages by default */
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* This logic shows only the active "page" based on the URL link */
+        #home:target, #models:target, #about:target {
+            display: block;
+        }
+
+        /* Shows the Home page by default when you first open the file */
+        #home {
+            display: block;
+        }
+        
+        /* If any other section is targeted, hide the default home block */
+        :target ~ #home:not(:target) {
+            display: none;
+        }
+
+        h2 {
+            color: #333;
+            border-left: 5px solid #000;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .model-card {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .model-card:last-child {
+            border-bottom: none;
+        }
+
+        .stats {
+            background: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            display: inline-block;
+        }
+
+        .quote {
+            background-color: #000;
+            color: #fff;
+            padding: 25px;
+            border-right: 8px solid #a6a6a6;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000;
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MERCEDES-BENZ</h1>
+        <p>The Best or Nothing</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#models">Vehicle Lineup</a>
+        <a href="#about">The Heritage</a>
+    </nav>
+
+    <div id="home" class="container">
+        <h2>Luxury and Innovation</h2>
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=1200" alt="Mercedes-Benz AMG GT">
+        <p>Mercedes-Benz is synonymous with luxury, safety, and performance. As the inventors of the first gasoline-powered car, we continue to lead the world in automotive engineering and sophisticated design.</p>
+    </div>
+
+    <div id="models" class="container">
+        <h2>Our Model Lineup</h2>
+        
+        <div class="model-card">
+            <h3>S-Class Sedan</h3>
+            <img src="https://media.zigcdn.com/media/model/2021/Oct/front-1991775765_600x400.jpg" alt="Mercedes S-Class">
+            <div class="stats"><strong>Category:</strong> Luxury Flagship</div>
+            <p>The S-Class is the world's best-selling luxury sedan, offering groundbreaking safety technology and unparalleled interior comfort.</p>
+        </div>
+
+        <div class="model-card">
+            <h3>AMG ONE</h3>
+            <img src="https://www.rushlane.com/wp-content/uploads/2022/06/mercedes-amg-one-launch-price-5.jpg" alt="Mercedes-AMG ONE">
+            <div class="stats"><strong>Engine:</strong> Formula 1 Hybrid Tech</div>
+            <p>A true street-legal Formula 1 car, the AMG ONE brings high-performance racing technology from the track directly to the road.</p>
+        </div>
+
+        <div class="model-card">
+            <h3>G-Class (G-Wagon)</h3>
+            <img src="https://cimg2.ibsrv.net/ibimg/hgm/1920x1080-1/100/923/mercedes-benz-g-class_100923266.jpg" alt="Mercedes G-Class">
+            <div class="stats"><strong>Capability:</strong> Off-Road Icon</div>
+            <p>Originally developed for military use, the G-Wagon has become a global symbol of rugged durability and elite status.</p>
+        </div>
+    </div>
+
+    <div id="about" class="container">
+        <h2>The Legacy of Stuttgart</h2>
+        <img src="https://storage.googleapis.com/yk-cdn/photos/pdp/jorg-wanderer/mercedes-benz-museum.jpg" alt="Mercedes-Benz Museum">
+        <p>In 1886, Carl Benz patented the <strong>Motorwagen</strong>, changing human mobility forever. Today, headquartered in Stuttgart, Germany, Mercedes-Benz remains at the forefront of the electric revolution with the EQ series.</p>
+        
+        <div class="quote">
+            "The love of inventing never dies." — Carl Benz
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 MERCEDES-BENZ AG | Engineered for Excellence
+    </footer>
+
+</body>
+</html>
